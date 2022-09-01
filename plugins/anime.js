@@ -1,4 +1,4 @@
-const bots = require("../events");
+const bots = require("../lib/perfix");
 const axios = require("axios");
 // const lang = bots.getString("github");
 
