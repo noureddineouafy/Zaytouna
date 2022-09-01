@@ -4,7 +4,7 @@ const axios = require("axios");
 
 bots.bot(
   {
-    pattern: ["github"],
+    pattern: ["git"],
     desc: "git link",
     usage: '<userName>',
     sucReact: "💻",
