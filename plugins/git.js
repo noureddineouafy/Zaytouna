@@ -1,8 +1,8 @@
-const ezio = require("../lib/perfix");
-const lang = ezio.getString("github");
+const bots = require("../lib/perfix");
+const lang = bots.getString("github");
 const axios = require("axios");
 
-ezio.bot(
+bots.bot(
   {
     pattern: ["github"],
     desc: "git link",
