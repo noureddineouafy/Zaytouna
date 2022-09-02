@@ -27,6 +27,8 @@
     "cheerio": "^1.0.0-rc.10",
     "child_process": "^1.0.2",
     "crypto": "^1.0.1",
+    "heroku-client": "^3.1.0",
+    "simple-git": "^2.37.0",
     "pg": "^8.7.3",
     "file-type": "^16.5.3",
     "fluent-ffmpeg": "^2.1.2",
