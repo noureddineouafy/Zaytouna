@@ -4,8 +4,10 @@
   
   [![Whatsapp Bot](https://readme-typing-svg.herokuapp.com?font=times-bold-italic&color=%23F7F7F7&duration=4862&center=true&vCenter=true&lines=WELCOME+TO+INRL+MD+GIT+REPO)](https://chat.whatsapp.com/GuoCHF6Wjci8rKPe6CKHsi)
 </div>
+<div align="center">
 <br><br><br>
 when using the bot, you need to change credits  ｍｅ ｔｏ ｙｏｕ, you need to edit config.js &lib/config.js<br><br><br>
+</div>
 # DEPLOYING ON HEROKU
   <div align="left">
    
