@@ -12,6 +12,7 @@ module.exports = {
     U_STATUS: process.env.U_STATUS || 'true',
     WORKTYPE: process.env.WORKTYPE || 'public',
     OWNER : "917025099154",
+    BRANCH: 'master',
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
     HEROKU: {
         HEROKU: process.env.HEROKU === undefined ? false : convertToBool(process.env.HEROKU),
