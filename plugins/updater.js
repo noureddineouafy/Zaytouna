@@ -7,7 +7,7 @@ const Heroku = require('heroku-client');
 const { PassThrough } = require('stream');
 const heroku = new Heroku({ token: Config.HEROKU.API_KEY })
 
-faz.bot({pattern: ['update'], sucReact: "🥰",category: ["system", "all"], fromMe: true, dontAddCommandList: true, desc: "to update the bot remotly"},(async (message, client) => {
+faz.bot({pattern: ['update'], dontAddCommandList: true, sucReact: "🥰",category: ["system", "all"]},(async (message, client) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
@@ -25,7 +25,7 @@ faz.bot({pattern: ['update'], sucReact: "🥰",category: ["system", "all"], from
     }
 }));
 
-faz.bot({pattern: ['update now'],sucReact: "🥰", category: ["system", "all"], fromMe: true,dontAddCommandList: true, desc: "updating"},  (async (message, client) => {
+faz.bot({pattern: ['update now'], dontAddCommandList: true, sucReact: "🥰", category: ["system", "all"]},  (async (message, client) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
