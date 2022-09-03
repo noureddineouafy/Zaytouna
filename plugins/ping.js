@@ -4,7 +4,7 @@ bots.bot(
 	   {
 		pattern: ['ping'],
 		desc: 'To check ping',
-                sucReact: "🥱",
+                sucReact: "🥱"
 	   },
 	async (message, client) => {
 		const start = new Date().getTime()
