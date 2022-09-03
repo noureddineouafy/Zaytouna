@@ -2,7 +2,7 @@ const  bots = require('../lib/perfix')
 
 bots.bot(
 	   {
-		pattern: 'ping ?(.*)',
+		pattern: ['ping'],
 		desc: 'To check ping',
 		usage: '<userName>',
                 sucReact: "🥱",
