@@ -35,7 +35,7 @@ bots.bot(
   async (message, client) => {
     const caption = "🎟 : *You can scan it with their whatsApp camera to jᴏɪɴg this group.*\n\n" + bots.config.exif.cap;
     const wImageUrl = "https://i.imgur.com/DyLAuEh.jpg";
-    const tImageUrl = ''https://imgur.com/AelfUJg.jpg";
+    const tImageUrl = "https://imgur.com/AelfUJg.jpg";
     const wImage = { image: { url: wImageUrl }, caption, };
     const tImage = { image: { url: tImageUrl }, caption, };
     if (message.client.command == 'group-qr-work') await client.sendMessage( message.from, wImage, { quoted: message })
