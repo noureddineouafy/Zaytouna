@@ -38,7 +38,7 @@ bots.bot(
  └───────────────┈ ⳹`;
 
       const buttons = [
-        { buttonId: ".extra_urls", buttonText: { displayText: "ᴜʀʟꜱ" }, type: 1, },
+        { buttonId: ".urls", buttonText: { displayText: "ᴜʀʟꜱ" }, type: 1, },
         { buttonId: ".creater", buttonText: { displayText: "ᴄʀᴇᴀᴛᴇʀ" }, type: 1, },
         { buttonId: ".menu", buttonText: { displayText: "ᴍᴇɴᴜ" }, type: 1, },
       ]
