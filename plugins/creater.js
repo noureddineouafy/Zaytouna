@@ -13,7 +13,7 @@ bots.bot(
   async (message, client) => {
     try {
       const buttons = [
-        { buttonId: ".git", buttonText: { displayText: "ꜱᴜᴩᴩᴏʀᴛ" }, type: 1, },
+        { buttonId: ".urls", buttonText: { displayText: "url" }, type: 1, },
         { buttonId: ".git", buttonText: { displayText: "ɢɪᴛʜᴜʙ" }, type: 1, },
       ];
       const text = `------- ᴀʙᴏᴜᴛ ᴏᴡɴᴇʀ -------
