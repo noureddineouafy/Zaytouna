@@ -4,16 +4,13 @@ bots.bot(
 	   {
 		pattern: ['ping'],
 		desc: 'To check ping',
-		usage: '<userName>',
                 sucReact: "🥱",
                 category: ["search", "all"],
 	   },
 	async (message, client) => {
 		const start = new Date().getTime()
-		await message.send('```Ping!```')
+		await client.sendMessage( message.from, 'Ping!', { quoted: message })
 		const end = new Date().getTime()
-		return await message.send(
-			'*Pong!*\n ```' + (end - start) + '``` *ms*'
-		)
+		return await client.sendMessage( message.from,'Pong!\n' + (end - start) + 'ms', { quoted: message })
 	}
 )
