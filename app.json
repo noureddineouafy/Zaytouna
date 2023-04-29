@@ -1,0 +1,28 @@
+{
+	"name": "inrl",
+	"description": "inrl-wa-bot-md",
+	"keywords": [],
+	"stack": "container",
+	"env": {
+	"SESSION_ID": {
+		"description": "to run the bot",
+		"required": true,
+		"value": ""
+		},
+       "HEROKU_API_KEY": {
+            "description": "For updating bot and setting vars remotely",
+            "required": true,
+            "value":""
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Exact name which you gave at the top",
+            "required": true,
+            "value":""
+        },
+	"MONGO_URL": {
+		"description": "enter db url to work the bot without limit",
+		"required": false,
+		"value": ""
+		}
+	}
+}
