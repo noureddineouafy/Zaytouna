@@ -1,6 +1,5 @@
-const { WELCOME_MSG } = require('../config');
 const { inrl,getVar,UpdateVariable } = require('../lib');
-let a = ["true", "false"], type = ["private","public"],response  = ["unavailable","available","composing","recording","paused"], sb = ["SUDO","BLOCK_CHAT","OWNER"];
+let a = ["true", "false"], type = ["private","public"],response  = ["unavailable","available","composing","recording","paused"], sb = ["SUDO","BLOCK_CHAT"];
 //const {exec} = require('chile
 
 function isTrue(a, obj) {
@@ -215,7 +214,6 @@ EXIT_MSG: ${EXIT_MSG}
 CALL_BLOCK: ${CALL_BLOCK}
 STATUS_VIEW: ${STATUS_VIEW}
 LANG: ${LANG}
-OWNER: ${OWNER}
 PROFILE_STATUS: ${PROFILE_STATUS}
 BLOCK_CHAT: ${BLOCK_CHAT}
 AUTO_CHAT_PM: ${AUTO_CHAT_PM}
@@ -260,8 +258,6 @@ return await message.reply(`CALL_BLOCK : ${CALL_BLOCK}`);
 return await message.reply(`STATUS_VIEW : ${STATUS_VIEW}`);
 } else if(value == "LANG"){
 return await message.reply(`LANG : ${LANG}`);
-} else if(value == "OWNER"){
-return await message.reply(`OWNER : ${OWNER}`);
 } else if(value == "PROFILE_STATUS"){
 return await message.reply(`PROFILE_STATUS : ${PROFILE_STATUS}`);
 } else if(value == "BLOCK_CHAT"){
@@ -307,7 +303,6 @@ inrl(
        fromMe : true
     },
 	   async (message, client, match) => {
-	   if(!message.client.isCreator) return message.reply('only for owner!!');
 	   if(!match) return message.reply('need variable! values:- sudo,block_chat');
 	   let KeyID = match.split(':')[0].toUpperCase().trim() || match.trim();
 	   let value;
