@@ -114,8 +114,8 @@ inrl({
     let {
         STICKER_DATA
     } = data.data[0];
-    if (!match) return message.send('send to emojis \n\n _ex_:❣️+🥵');
-    if (!match.includes('+')) return message.send('need two emojis, Example emojimix 🥺+😹');
+    if (!match) return message.send('*send to emojis* \n\n _ex_:❣️+🥵');
+    if (!match.includes('+')) return message.send('*need two emojis*, _Example emojimix_ 🥺+😹');
     let emoji1, emoji2;
     if (match.includes('+')) {
         let split = match.split('+');
@@ -124,12 +124,12 @@ inrl({
     }
     let md = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
     for (let res of md.results) {
-        let encmedia = await client.sendImageAsSticker(message.from, res.url, message, {
-            packname: STICKER_DATA.split(',')[0],
-            author: STICKER_DATA.split(',')[1],
-            categories: res.tags
-        })
-        return await fs.unlinkSync(encmedia)
+        await client.sendFile(message.from, await getBuffer(res.url), "",message, {
+          asSticker: true,
+          author: STICKER_DATA.split(',')[0],
+          packname: STICKER_DATA.split(',')[1],
+          categories: ["😄", "😊"],
+        });
     }
 })
 //get Labs
