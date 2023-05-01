@@ -51,8 +51,6 @@ module.exports = async (msg, conn, m, store) => {
                 time2 = moment().tz('Asia/Kolkata').format('HH:mm');
                 if (time2 == time) {
                   setTimeout(async()=>{
-                    let BotAdmin = await isBotAdminV1(m, conn, jid);
-                    if (!BotAdmin) return;
                     return await conn.groupSettingUpdate(jid, "announcement");
                   },12000);
                 }
@@ -67,8 +65,6 @@ module.exports = async (msg, conn, m, store) => {
             time1 = moment().tz('Asia/Kolkata').format('HH:mm');
             if (time1 == time) {
               setTimeout(async()=>{
-                let BotAdmin = await isBotAdminV1(m, conn, jid);
-                if (!BotAdmin) return;
                 return await conn.groupSettingUpdate(jid, "not_announcement");
               },12000);
             }
@@ -197,7 +193,7 @@ inrl({
         return await message.reply('_if no action when trying on the word restart the bot_');
     } else if (!data.includes(match)) {
         await setAntiWord(message.from, match);
-        return await message.reply('_if no action when trying on the word restart the bot_');
+        return await message.reply('_success!. \nif no action when trying on the word restart the bot_');
     } else {
         return await message.reply('_given word already set as antiword_');
     }
@@ -216,7 +212,7 @@ inrl({
     if (!admin && !message.client.isCreator) return await message.reply('Action only For admin or Owner');
     if (!match) return await message.reply('_give me the starting of fake Number_');
     match = match.replace(/[^0-9]/g, "");
-    if (isNaN(match)) return message.reply('*need Number!*');
+    if (!match) return message.reply('*need Number!*');
     let data = await GetFake(message.from);
     await message.reply(data)
     if (data == "no data" || !data) {
@@ -352,12 +348,11 @@ inrl({
         let data = await getListofFake();
         if (!data || data == "no data") return await message.reply("no data");
         await data.map(async ({
-            id,
             data,
             jid
         }) => {
             if (id == withValue()) {
-                T_X_T += `id : ${id}\nnumber: ${data} \njid : ${jid}\n\n`
+                T_X_T += `number: ${data} \njid : ${jid.replace(withValue(),'')}\n\n`
             } else T_X_T += "no data"
         });
         return await message.reply(T_X_T);
@@ -383,12 +378,11 @@ inrl({
         let data = await getListOfWord();
         if (!data || data == "no data") return await message.reply("no data");
         await data.map(async ({
-            id,
             data,
             jid
         }) => {
             if (id == withValue()) {
-                T_X_T += `id : ${id}\nword: ${data} \njid : ${jid}\n\n`
+                T_X_T += `word: ${data} \njid : ${jid.replace(withValue(),'')}\n\n`
             } else T_X_T += "no data"
         });
         return await message.reply(T_X_T);
