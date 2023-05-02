@@ -5,6 +5,10 @@
 </div>
 
   <div align="left">
+
+### `GET PLUGINS`
+
+[Click Here](https://gist.github.com/inrl-official/)
    
 ## `⨷ FORK REPO`
 
