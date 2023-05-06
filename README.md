@@ -8,7 +8,7 @@
 
 ### `GET PLUGINS`
 
-[Click Here](https://gist.github.com/inrl-official/)
+[Click Here](https://github.com/inrl-official/externel-plugins)
    
 ## `⨷ FORK REPO`
 
