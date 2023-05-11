@@ -1,7 +1,7 @@
-# *Inrl Multi-Device whatsapp Bot*
+# *Zaytouna Multi-Device whatsapp Bot*
 <div align="center">
   
-  [![Whatsapp Bot](https://readme-typing-svg.herokuapp.com?font=times-bold-italic&color=%23F7F7F7&duration=4862&center=true&vCenter=true&lines=WELCOME+TO+INRL+MD+GIT+REPO)](https://chat.whatsapp.com/GuoCHF6Wjci8rKPe6CKHsi)
+  [![Whatsapp Bot](https://readme-typing-svg.herokuapp.com?font=times-bold-italic&color=%23F7F7F7&duration=4862&center=true&vCenter=true&lines=WELCOME+TO+Zaytouna+MD+GIT+REPO)](https://chat.whatsapp.com/GuoCHF6Wjci8rKPe6CKHsi)
 </div>
 
   <div align="left">
